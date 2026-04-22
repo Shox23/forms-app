@@ -19,9 +19,9 @@ export function useSuccessModal() {
   }, [setIsSuccess]);
 
   const handleReturnHome = useCallback(() => {
+    navigate(ROUTES.STEP_ONE);
     setIsSuccess(false);
     resetForm();
-    navigate(ROUTES.STEP_ONE);
   }, [setIsSuccess, resetForm, navigate]);
 
   return {
